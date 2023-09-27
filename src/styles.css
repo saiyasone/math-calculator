@@ -1,1 +1,250 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&family=Lexend+Exa:wght@300&family=Open+Sans&family=Outfit:wght@300;400&family=Overpass:wght@300;500&family=Poppins&family=Roboto:ital,wght@0,300;0,500;1,500&family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600&family=Lexend+Exa:wght@300&family=Open+Sans&family=Outfit:wght@300;400&family=Overpass:wght@300;500&family=Poppins&family=Roboto:ital,wght@0,300;0,500;1,500&family=Ubuntu:wght@300&display=swap");
+
+:root {
+  /* ========= Dark ========= */
+  --theme-bg-body: #3b4664;
+  --theme-text-white: #fff;
+  --theme-mode: #d13f30;
+  --theme-bg-circle: #252d44;
+
+  --theme-bg-screen: #181f32;
+  --theme-text-screen: #fff;
+
+  --theme-panel-body: #252d44;
+  --theme-bg-btn: #eae3db;
+  --theme-bg-btn-border: #ddd;
+  --theme-bg-btn-light: #fff;
+  --theme-text-btn: #404553;
+  --theme-bg-feature-btn: #647299;
+  --theme-bg-feature-btn-light: #a2b3e1;
+  --theme-bg-result: #d13f30;
+  --theme-bg-result-light: #f96c5b;
+
+  /* ========= Light ========= */
+  --theme-bg-body: #e6e6e6;
+  --theme-text-white: #383932;
+  --theme-mode: #c85401;
+  --theme-bg-circle: #d3cdcd;
+
+  --theme-bg-screen: #fff;
+  --theme-text-screen: #181f32;
+
+  --theme-panel-body: #d3cdcd;
+  --theme-bg-btn: #eae3db;
+  --theme-bg-btn-light: #fff;
+  --theme-bg-btn-border: #a59b91;
+  --theme-text-btn: #404553;
+  --theme-bg-feature-btn: #388186;
+  --theme-bg-feature-btn-light: #62b5bd;
+  --theme-bg-result: #c85401;
+  --theme-bg-result-light: #ff8a38;
+
+  /* ========= Zync ========= */
+  --theme-bg-body: #17062a;
+  --theme-text-white: #f0d938;
+  --theme-mode: #00decf;
+  --theme-bg-circle: #1d0834;
+
+  --theme-bg-screen: #fff;
+  --theme-text-screen: #fff;
+
+  --theme-panel-body: #1d0834;
+  --theme-bg-btn: #321a4b;
+  --theme-bg-btn-light: #6b34ac;
+  --theme-bg-btn-border: #94fff9;
+  --theme-text-btn: #f0d938;
+  --theme-bg-feature-btn: #56077c;
+  --theme-bg-feature-btn-light: #8631b0;
+  --theme-bg-result: #00decf;
+  --theme-bg-result-light: #94fff9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+body {
+  transition: 0.4s all ease;
+  behavior: smooth;
+}
+
+.calculator-container {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator-container .container {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 500px) {
+  .calculator-container .container {
+    padding: 15px;
+  }
+}
+
+/* ======== Header ======== */
+.container .header {
+  width: 100%;
+}
+.header .header-choice {
+  width: 100%;
+  margin-bottom: 0.68rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.header-choice .text-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.text-wrapper .text {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--theme-text-screen);
+  text-align: center;
+}
+.header .header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .header-text h2 {
+  font-weight: bolder;
+  color: var(--theme-text-screen);
+}
+.header .header-action {
+  display: flex;
+  gap: 1rem;
+}
+
+.header-action .label-theme {
+  display: flex;
+  justify-self: flex-end;
+  align-self: flex-end;
+  margin-bottom: 0.35rem;
+}
+.header-action .label-theme .label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--theme-text-white);
+}
+.header-circle .label-circle {
+  width: 100px;
+  padding: 13px;
+  border-radius: 30px;
+  background-color: var(--theme-bg-circle);
+  position: relative;
+}
+.label-circle .group-mode {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.group-mode button {
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+}
+.group-mode .btn-thin {
+  background-color: #ccc;
+}
+.group-mode button.active {
+  background-color: var(--theme-mode);
+}
+.header-action .header-circle {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .panel-result {
+  background-color: var(--theme-panel-body);
+  border-radius: 8px;
+  margin: 1.2rem 0;
+  height: fit-content;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.panel-result .panel-state {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.panel-state span {
+  color: var(--theme-text-screen);
+  font-size: 1.5rem;
+}
+.panel-result .panel {
+  text-align: right;
+  padding: 1.5rem 1rem;
+}
+.panel h1 {
+  margin: 0;
+  color: var(--theme-text-screen);
+}
+
+.container .panel-body {
+  border-radius: 8px;
+  background-color: var(--theme-panel-body);
+  padding: 1.3rem;
+}
+.panel-body .panel-top-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+}
+
+.panel-body .btn-general {
+  padding: 8px 20px;
+  height: 46px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  background-color: var(--theme-bg-btn);
+  border-bottom: 3.5px solid var(--theme-bg-btn-border);
+  text-align: center;
+  transition: 0.3s all;
+  color: var(--theme-text-btn);
+}
+.panel-body .btn-general:hover {
+  background-color: var(--theme-bg-btn-light);
+}
+.panel-body .btn-feature {
+  text-transform: uppercase;
+  background-color: var(--theme-bg-feature-btn);
+  color: #fff;
+}
+.panel-body .btn-feature:hover {
+  background-color: var(--theme-bg-feature-btn-light);
+}
+.panel-body .btn-result {
+  background-color: var(--theme-bg-result);
+  color: #fff;
+}
+.panel-body .btn-result:hover {
+  background-color: var(--theme-bg-result-light);
+  border-bottom: var();
+}
+
+.panel-body .panel-bottom-wrapper {
+  width: 100%;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
